@@ -16,6 +16,7 @@
           <td v-if="showIndex" style="width: 70; text-align: center">{{ index + 1 }}</td>
           <td v-for="(td, key) in columns" :key="key">
             <div class="td" :style="`width: ${td.width}px;`">
+              <!-- 未指定render函数，则默认使用prop -->
               <span v-if="!td.cellRender">
                 {{ tr[td.prop] }}
               </span>
@@ -26,7 +27,7 @@
         </tr>
       </tbody>
     </table>
-    <div v-if="!(data as []).length" class="no-message">{{ emptyText }}</div>
+    <div v-if="!data.length" class="no-message">{{ emptyText }}</div>
   </div>
 </template>
 
@@ -45,7 +46,7 @@ const showIndex = false;
 defineProps<{
   columns: Array<columnType>;
   emptyText?: string;
-  data: unknown;
+  data: Array<any>;
 }>();
 </script>
 

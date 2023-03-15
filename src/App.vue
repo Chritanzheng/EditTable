@@ -2,11 +2,44 @@
 import VRenderTable from './components/VRenderTable/index.vue'
 
 const column = [
-  { label: 'test1', prop: 'test1' }
+  {
+    label: 'Date',
+    prop: 'date',
+    width: 100,
+  },
+  {
+    label: 'Name',
+    prop: 'name',
+    width: 100
+  },
+  {
+    label: 'Address',
+    prop: 'address',
+    width: 250
+  },
 ]
 
 const tableData = [
-  { test1: 1 }
+  {
+    date: '2016-05-03',
+    name: 'Tom',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-02',
+    name: 'Tom',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-04',
+    name: 'Tom',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
+  {
+    date: '2016-05-01',
+    name: 'Tom',
+    address: 'No. 189, Grove St, Los Angeles',
+  },
 ]
 </script>
 
